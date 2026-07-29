@@ -1,0 +1,79 @@
+
+:root {
+    --nav-color: #0E0E0E;
+}
+
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(./fonts/source-sans-pro/SourceSansPro-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(./fonts/source-sans-pro/SourceSansPro-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(./fonts/source-sans-pro/SourceSansPro-Semibold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/* =================
+    Navbar
+   ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 59px;
+
+    border: 1px solid red;
+    padding: 0 1.5em; /* 24px */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--nav-color);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 0.847em; /* 13.55px */
+
+    gap: 0.311em; /* 4.21px */
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+
+    list-style-type: none;
+    
+    text-transform: uppercase;
+
+    gap: 2em; /* 24px */
+    font-size: 0.75rem; /* 12px */
+    font-weight: 600;
+}
