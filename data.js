@@ -1,4 +1,4 @@
-export const articles = [
+export const articleListings = [
 
     {
         articleDate: "July 14, 2002",
