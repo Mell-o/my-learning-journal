@@ -4,6 +4,10 @@
 
     --article-listings-header-color: #141414;
     --article-preview-color: #505050;
+
+    --footer-text-primary-color: #ECECEC;
+    --footer-text-secondary-color: #D7D7D7;
+    --footer-background-color: #202020;
 }
 
 *, *::after, *::before {
@@ -41,6 +45,10 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
 
+}
+
+p {
+    margin: 0;
 }
 
 /* =================
@@ -165,10 +173,6 @@ body {
     color: var(--article-listings-header-color);
 }
 
-.article-listings p {
-    margin: 0;
-}
-
 
 /* =================
     View More Button
@@ -187,6 +191,30 @@ body {
     margin: 0 0 2.688em 0; /* 43px */
 }
 
+/* =================
+    Footer
+   ================= */
+
+footer {
+    background-color: var(--footer-background-color);
+    font-size: 0.75em; /* 12px */
+    text-align: center;
+    min-width: 414px;
+    padding: 3.083em 0; /* 37px */
+}
+
+.footer-page-title {
+    color: var(--footer-text-primary-color);
+    font-weight: 700;
+    line-height: 108.2%;
+    letter-spacing: -3%;
+    margin: 0 0 0.25em 0; /* 3px */
+}
+
+.copyright-text {
+    color: var(--footer-text-secondary-color);
+    line-height: 125%;
+}
 @media screen and (min-width: 1085px){
     .article-listings {
         grid-template-columns: repeat(3, 1fr);
