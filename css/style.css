@@ -3,18 +3,21 @@
     --nav-color: #0E0E0E;
 }
 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
 
 @font-face {
     font-family: "Source Sans Pro";
-    src: url(./fonts/source-sans-pro/SourceSansPro-Regular.ttf) format("truetype");
-    font-weight: normal;
+    src: url(../fonts/source-sans-pro/SourceSansPro-Regular.ttf) format("truetype");
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Source Sans Pro";
-    src: url(./fonts/source-sans-pro/SourceSansPro-Bold.ttf) format("truetype");
+    src: url(../fonts/source-sans-pro/SourceSansPro-Bold.ttf) format("truetype");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -22,15 +25,25 @@
 
 @font-face {
     font-family: "Source Sans Pro";
-    src: url(./fonts/source-sans-pro/SourceSansPro-Semibold.ttf) format("truetype");
+    src: url(../fonts/source-sans-pro/SourceSansPro-Semibold.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(../fonts/source-sans-pro/SourceSansPro-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 body {
     margin: 0;
     font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
 }
 
 /* =================
@@ -44,7 +57,6 @@ body {
 
     min-height: 59px;
 
-    border: 1px solid red;
     padding: 0 1.5em; /* 24px */
 }
 
@@ -76,4 +88,40 @@ body {
     gap: 2em; /* 24px */
     font-size: 0.75rem; /* 12px */
     font-weight: 600;
+}
+
+/* =================
+    Hero
+   ================= */
+
+.hero-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    min-width: 414px;
+    min-height: 293px;
+
+    background-image: url("../images/hero-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+
+    gap: 0.5em; /* 8px */
+    padding: 0 1.25em 1.563em 1.25em; /* 20px 25px 20px */
+}
+
+.hero-post time {
+    font-size: 0.75rem; /* 12px */
+    text-transform: uppercase;
+}
+
+.hero-post h2 {
+    margin: 0;
+    font-size: 2rem; /* 32px */
+}
+
+.hero-post p {
+    margin: 0;
 }
