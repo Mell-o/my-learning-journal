@@ -1,6 +1,9 @@
 
 :root {
     --nav-color: #0E0E0E;
+
+    --article-listings-header-color: #141414;
+    --article-preview-color: #505050;
 }
 
 *, *::after, *::before {
@@ -33,9 +36,11 @@
 
 
 body {
-    margin: 0;
+    margin: 0 auto;
+
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
+
 }
 
 /* =================
@@ -102,6 +107,7 @@ body {
 
     gap: 0.5em; /* 8px */
     padding: 0 1.25em 1.563em 1.25em; /* 20px 25px 20px */
+    margin: 0  0 2.125em 0; /* 34px */
 }
 
 .hero-post time {
@@ -116,4 +122,55 @@ body {
 
 .hero-post p {
     margin: 0;
+}
+
+/* =================
+    Article Listing
+   ================= */
+
+.article-listings-section {
+    margin: 0 1.25em 1.688em; /* 27px 20px*/
+}
+
+.article-listings {
+    display: grid;
+
+    gap: 2.563em; /* 41px */
+    padding: 0;
+    margin: 0;
+}
+
+.article-listings img {
+    width: 100%;
+    margin: 0 0 0.875em 0; /* 14px */
+}
+
+.article-listings article {
+    height: 100%;
+    width: 100%;
+    color: var(--article-preview-color);
+}
+
+.article-listings time {
+    display: block;
+
+    font-size: 0.875rem; /* 14px */
+
+    margin: 0 0 0.635em 0; /* 9px */
+}
+
+.article-listings h2 {
+    margin: 0 0 0.375em 0; /* 9px */
+    font-size: 1.695rem; /* 24px */
+    color: var(--article-listings-header-color);
+}
+
+.article-listings p {
+    margin: 0;
+}
+
+@media screen and (min-width: 1085px){
+    .article-listings {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
