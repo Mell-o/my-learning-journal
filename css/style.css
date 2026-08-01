@@ -93,13 +93,16 @@ time {
     color: var(--nav-color);
 }
 
+.navbar h1 {
+    font-size: 0.847em; /* 13.55px */
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
 
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 0.847em; /* 13.55px */
 
     gap: 0.311em; /* 4.21px */
 }
@@ -242,15 +245,18 @@ time {
 
 .hero-article h3 {
     font-size: 1rem; /* 16px */
-    margin: 0 0 1em 0; /* 16px */
+    margin: 0;
 }
 
 .hero-article img {
     margin: 2.188em 0; /* 35px */
 }
 
-.mb-16 {
-    margin: 0 0 1em 0; /* 16px */
+.article-body,
+.article-body section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .recent-posts-header {
