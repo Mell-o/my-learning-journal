@@ -5,6 +5,8 @@
     --article-listings-header-color: #141414;
     --article-preview-color: #505050;
 
+    --hero-article-color: #151515;
+
     --footer-text-primary-color: #ECECEC;
     --footer-text-secondary-color: #D7D7D7;
     --footer-background-color: #202020;
@@ -44,16 +46,37 @@ body {
 
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
+}
 
+h2 {
+    margin: 0;
+    font-size: 2rem; /* 32px */
 }
 
 p {
     margin: 0;
 }
 
+img {
+    width: 100%;
+}
+
+time {
+    text-transform: uppercase;
+}
+
+.hero-post time,
+.hero-article time {
+    font-size: 0.75rem; /* 12px */
+}
+
 /* =================
     Navbar
    ================= */
+
+.hero-article-page .navbar {
+    margin: 0 0 2em 0;
+}
 
 .navbar {
     display: flex;
@@ -79,6 +102,10 @@ p {
     font-size: 0.847em; /* 13.55px */
 
     gap: 0.311em; /* 4.21px */
+}
+
+.nav-logo img {
+    width: fit-content;
 }
 
 .nav-links {
@@ -127,11 +154,6 @@ p {
     margin: 0  0 2.125em 0; /* 34px */
 }
 
-.hero-post time {
-    font-size: 0.75rem; /* 12px */
-    text-transform: uppercase;
-}
-
 .hero-post h2 {
     margin: 0;
     font-size: 2rem; /* 32px */
@@ -149,6 +171,10 @@ p {
     margin: 0 1.25em 0; /* 20px */
 }
 
+.hero-article-page .article-listings-section {
+    margin-bottom: 3.5em; /* 56px */
+}
+
 .article-listings {
     display: grid;
 
@@ -158,7 +184,6 @@ p {
 }
 
 .article-listings img {
-    width: 100%;
     margin: 0 0 0.875em 0; /* 14px */
 }
 
@@ -182,7 +207,6 @@ p {
     color: var(--article-listings-header-color);
 }
 
-
 /* =================
     View More Button
    ================= */
@@ -198,6 +222,41 @@ p {
     background: none;
 
     margin: 0 0 2.688em 0; /* 43px */
+}
+
+/* =================
+    Hero Article
+   ================= */
+
+.hero-article-page {
+    color: var(--hero-article-color);
+}
+
+.hero-article {
+    margin: 0 1.25em 3.188em; /* 32px 20px 51px*/
+}
+
+.hero-article h2 {
+    margin: 0.5em 0 0.469em 0; /* 16px 15px */
+}
+
+.hero-article h3 {
+    font-size: 1rem; /* 16px */
+    margin: 0 0 1em 0; /* 16px */
+}
+
+.hero-article img {
+    margin: 2.188em 0; /* 35px */
+}
+
+.mb-16 {
+    margin: 0 0 1em 0; /* 16px */
+}
+
+.recent-posts-header {
+    font-size: 1rem; /* 16px */
+    margin: 0 0 1.688em 0; /* 27px */
+    text-align: center;
 }
 
 /* =================
@@ -224,6 +283,7 @@ footer {
     color: var(--footer-text-secondary-color);
     line-height: 125%;
 }
+
 @media screen and (min-width: 1085px){
     .article-listings {
         grid-template-columns: repeat(3, 1fr);
