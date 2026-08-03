@@ -228,6 +228,19 @@ time {
 }
 
 /* =================
+    Main Article
+   ================= */
+
+.main-article {
+    margin: 0 1.25em 3.188em; /* 32px 20px 51px*/
+}
+
+.main-article h3 {
+    font-size: 1rem; /* 16px */
+    margin: 0;
+}
+
+/* =================
     Hero Article
    ================= */
 
@@ -235,17 +248,8 @@ time {
     color: var(--hero-article-color);
 }
 
-.hero-article {
-    margin: 0 1.25em 3.188em; /* 32px 20px 51px*/
-}
-
 .hero-article h2 {
     margin: 0.5em 0 0.469em 0; /* 16px 15px */
-}
-
-.hero-article h3 {
-    font-size: 1rem; /* 16px */
-    margin: 0;
 }
 
 .hero-article img {
@@ -263,6 +267,30 @@ time {
     font-size: 1rem; /* 16px */
     margin: 0 0 1.688em 0; /* 27px */
     text-align: center;
+}
+
+/* =================
+    About Me Article
+   ================= */
+
+.about-me-article-header {
+    display: grid;
+}
+
+.bio-pic {
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+    margin: 0 0 1.688em 0; /* 27px */
+}
+
+.about-me-article h2 {
+    font-size: 2.188rem; /* 35px */
+    margin: 0 0 0.457em 0; /* 16px */
+}
+
+.about-me-page .about-me-sub {
+    margin: 0 0 3.125em 0; /* 50px */
 }
 
 /* =================
