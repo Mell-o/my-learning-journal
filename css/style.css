@@ -1,6 +1,9 @@
 
 :root {
+    --body-bg-color: #FAFAFA;
+
     --nav-color: #0E0E0E;
+    --navbar-bg-color: #FFFFFF;
 
     --article-listings-header-color: #141414;
     --article-preview-color: #505050;
@@ -46,6 +49,8 @@ body {
 
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
+
+    background-color: var(--body-bg-color);
 }
 
 h2 {
@@ -85,7 +90,9 @@ time {
 
     min-height: 59px;
 
-    padding: 0 1.5em; /* 24px */
+    padding: 0 1.5em; /* 24pxc */
+    background-color: var(--navbar-bg-color);
+
 }
 
 .navbar a {
@@ -273,8 +280,12 @@ time {
     About Me Article
    ================= */
 
-.about-me-article-header {
+.about-me-article-header-grid {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "biop"
+    "head";
 }
 
 .bio-pic {
@@ -282,11 +293,16 @@ time {
     height: 182px;
     border-radius: 50%;
     margin: 0 0 1.688em 0; /* 27px */
+    grid-area: biop;
+}
+
+.about-me-article-heading {
+    grid-area: head;
 }
 
 .about-me-article h2 {
-    font-size: 2.188rem; /* 35px */
-    margin: 0 0 0.457em 0; /* 16px */
+    font-size: 2.125rem; /* 34px */
+    margin: 0 0 0.471em 0; /* 16px */
 }
 
 .about-me-page .about-me-sub {
@@ -319,7 +335,56 @@ footer {
 }
 
 @media screen and (min-width: 1085px){
+    .article-listings-section {
+        margin: 0 0 3.188em 0; /* 51px */
+    }
+
     .article-listings {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-article h3 {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .recent-posts-header {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .about-me-page .navbar {
+        margin: 0 0 5.688em 0; /* 91px */
+    }
+
+    .about-me-page main {
+        margin: 0 3.313em; /* 53px */
+    }
+
+    .about-me-article-header-grid {
+        grid-template-areas:
+        "biop head";
+        gap: 0 2.063em; /* 33px */
+        margin: 0 0 2em 0; /* 32px */
+    }
+
+    .bio-pic {
+        margin: 0 0 1.688em 0; /* 27px */
+    }
+
+
+    .about-me-article h2 {
+        font-size: 2.25rem; /* 36px */
+        margin: 0 0 0.278em 0; /* 10px */
+    }
+
+    .about-me-page .main-article {
+        margin: 0 0 3.188em 0; /* 32px 20px 51px 53px*/
+    }
+    
+    .about-me-page .article-body {
+        margin: 0 0 0 4.25em; /* 68px */
+    }
+
+    .about-me-page .about-me-sub {
+        margin: 0;
     }
 }
