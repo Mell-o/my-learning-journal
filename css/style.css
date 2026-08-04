@@ -68,10 +68,6 @@ img {
 
 time {
     text-transform: uppercase;
-}
-
-.hero-post time,
-.hero-article time {
     font-size: 0.75rem; /* 12px */
 }
 
@@ -335,21 +331,51 @@ footer {
 }
 
 @media screen and (min-width: 1085px){
+    time {
+        text-transform: uppercase;
+        font-size: 1rem; /* 12px */
+    }
+
     .article-listings-section {
-        margin: 0 0 3.188em 0; /* 51px */
+        margin: 0 3.313em 3.188em; /* 53px 51px */
     }
 
     .article-listings {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .main-article {
+        margin: 0 3.313em 4.563em; /* 51px */
+    }
+
+    .main-article h2 {
+        font-size: 2.25rem; /* 36px */
+    }
+
     .main-article h3 {
-        font-size: 1.25rem; /* 20px */
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .main-article p {
+        font-size: 1.125rem; /* 18px */
+    }
+
+    /* =================
+       Hero Article
+       ================= */
+
+    .hero-article-header,
+    .hero-article-page .article-body {
+        margin: 0 4.25em 0; /* 68px */
     }
     
     .recent-posts-header {
         font-size: 1.5rem; /* 24px */
     }
+
+    /* =================
+       About Me Article
+       ================= */
 
     .about-me-page .navbar {
         margin: 0 0 5.688em 0; /* 91px */
@@ -370,18 +396,12 @@ footer {
         margin: 0 0 1.688em 0; /* 27px */
     }
 
-
     .about-me-article h2 {
-        font-size: 2.25rem; /* 36px */
         margin: 0 0 0.278em 0; /* 10px */
-    }
-
-    .about-me-page .main-article {
-        margin: 0 0 3.188em 0; /* 32px 20px 51px 53px*/
     }
     
     .about-me-page .article-body {
-        margin: 0 0 0 4.25em; /* 68px */
+        margin: 0 4.25em 0; /* 68px */
     }
 
     .about-me-page .about-me-sub {
