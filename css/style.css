@@ -43,7 +43,6 @@
     font-display: swap;
 }
 
-
 body {
     margin: 0 auto;
 
@@ -74,10 +73,6 @@ time {
 /* =================
     Navbar
    ================= */
-
-.hero-article-page .navbar {
-    margin: 0 0 2em 0;
-}
 
 .navbar {
     display: flex;
@@ -177,10 +172,6 @@ time {
     margin: 0 1.25em 0; /* 20px */
 }
 
-.hero-article-page .article-listings-section {
-    margin-bottom: 3.5em; /* 56px */
-}
-
 .article-listings {
     display: grid;
 
@@ -243,22 +234,6 @@ time {
     margin: 0;
 }
 
-/* =================
-    Hero Article
-   ================= */
-
-.hero-article-page {
-    color: var(--hero-article-color);
-}
-
-.hero-article h2 {
-    margin: 0.5em 0 0.469em 0; /* 16px 15px */
-}
-
-.hero-article img {
-    margin: 2.188em 0; /* 35px */
-}
-
 .article-body,
 .article-body section {
     display: flex;
@@ -271,6 +246,31 @@ time {
     margin: 0 0 1.688em 0; /* 27px */
     text-align: center;
 }
+
+/* =================
+    Hero Article
+   ================= */
+
+.hero-article-page {
+    color: var(--hero-article-color);
+}
+
+.hero-article-page .navbar {
+    margin: 0 0 2em 0;
+}
+
+.hero-article-page .article-listings-section {
+    margin-bottom: 3.5em; /* 56px */
+}
+
+.hero-article h2 {
+    margin: 0.5em 0 0.469em 0; /* 16px 15px */
+}
+
+.hero-article img {
+    margin: 2.188em 0; /* 35px */
+}
+
 
 /* =================
     About Me Article
@@ -311,10 +311,13 @@ time {
 
 footer {
     background-color: var(--footer-background-color);
-    font-size: 0.75em; /* 12px */
     text-align: center;
     min-width: 414px;
-    padding: 3.083em 0; /* 37px */
+    padding: 2.313em 0; /* 37px */
+}
+
+footer p {
+    font-size: 0.75em; /* 12px */
 }
 
 .footer-page-title {
@@ -332,17 +335,67 @@ footer {
 
 @media screen and (min-width: 1085px){
     time {
-        text-transform: uppercase;
-        font-size: 1rem; /* 12px */
+        font-size: 1rem; /* 16px */
     }
+
+    p {
+        font-size: 1.125rem; /* 18px */
+    }
+
+    /* =================
+       Navbar
+       ================= */
+
+    .navbar h1 {
+        font-size: 1.125rem; /* 20px */
+    }
+
+    .nav-links {
+        font-size: 1rem; /* 16px */
+    }
+
+    /* =================
+       Hero
+       ================= */
+
+    .hero-post {
+        background-image: url("../images/hero-img-desktop.png");
+        padding: 18em 23.5em 3.75em 3.313em; /* 288px 376px 60px 53px */
+        margin: 0  0 3.313em 0; /* 53px */  
+    }
+
+    .hero-post h2 {
+        margin: 0;
+        font-size: 2.5rem; /* 40px */
+    }
+
+    .hero-post p {
+        margin: 0 2.5em 0 0; /* 45px */
+    }
+
+    /* =================
+       Article Listing
+       ================= */
 
     .article-listings-section {
         margin: 0 3.313em 3.188em; /* 53px 51px */
     }
 
+    .article-listings-section p {
+        font-size: 1rem;
+    }
+
     .article-listings {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .view-more-btn {
+        margin: 1.938em 0 0 0; /* 31px */
+    }
+
+    /* =================
+       Main Article
+       ================= */
 
     .main-article {
         margin: 0 3.313em 4.563em; /* 51px */
@@ -354,10 +407,6 @@ footer {
 
     .main-article h3 {
         font-size: 1.5rem; /* 24px */
-    }
-
-    .main-article p {
-        font-size: 1.125rem; /* 18px */
     }
 
     /* =================
