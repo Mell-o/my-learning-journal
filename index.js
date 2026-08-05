@@ -16,7 +16,7 @@ function buildArticleListingsUl (numOfListings) {
         return `
         <li>
             <article>
-                <img src="${articleImg}">
+                <img src="${articleImg}" alt="">
                 <time datetime="${getFormattedDate(articleDate)}">${articleDate}</time>
                 <h2>${articleTitle}</h2>
                 <p>${articlePreview}</p>

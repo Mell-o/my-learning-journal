@@ -62,9 +62,11 @@ body {
     width: 100%;
 }
 
-a:hover, a:active {
-    color: var(--link-hover-color);
+a {
+    text-decoration: none;
+    cursor: pointer;
 }
+
 
 header {
     width: 100%;
@@ -102,12 +104,16 @@ time {
 
     padding: 0 1.5em; /* 24px */
     background-color: var(--navbar-bg-color);
+
+    color: var(--nav-color);
 }
 
 .navbar a {
-    text-decoration: none;
     color: var(--nav-color);
-    cursor: pointer;
+}
+
+.navbar a:hover, .navbar a:active {
+    color: var(--link-hover-color);
 }
 
 .navbar h1 {
@@ -149,8 +155,11 @@ time {
 
 .hero a {
     color: white;
-    text-decoration: none;
-    cursor: pointer;
+}
+
+
+.hero a:hover, .hero a:active {
+    color: var(--link-hover-color);
 }
 
 .hero-post {
