@@ -1,6 +1,10 @@
 import {articleListings} from "./data.js"
 
-const articleListingsUl = document.querySelector(".article-listings")
+const articleListingsUlHome = document.querySelector(".article-listings.home")
+const articleListingsUlAlt = document.querySelector(".article-listings.alt")
+
+console.log(articleListingsUlHome)
+console.log(articleListingsUlAlt)
 
 const getFormattedDate = (articleDate) => {
     const inputDate = new Date(articleDate)
@@ -11,36 +15,33 @@ const getFormattedDate = (articleDate) => {
 }
 
 function buildArticleListingsUl (numOfListings) {
-
-    articleListingsUl.innerHTML = articleListings.slice(0, numOfListings).map(({articleDate, articleTitle, articlePreview, articleImg}) => {
-        return `
-        <li>
-            <article>
-                <img src="${articleImg}" alt="">
-                <time datetime="${getFormattedDate(articleDate)}">${articleDate}</time>
-                <h2>${articleTitle}</h2>
-                <p>${articlePreview}</p>
-            </article>
-        </li>
-        `
-    }).join("")
+        return  articleListings.slice(0, numOfListings).map(({articleDate, articleTitle, articlePreview, articleImg}) => {
+            return `
+            <li>
+                <article>
+                    <img src="${articleImg}" alt="">
+                    <time datetime="${getFormattedDate(articleDate)}">${articleDate}</time>
+                    <h2>${articleTitle}</h2>
+                    <p>${articlePreview}</p>
+                </article>
+            </li>
+            `
+        }).join("")
 }
 
 
-if (window.innerWidth < 1085) {
-    buildArticleListingsUl(3)
-} else if (window.innerWidth >= 1085 && document.querySelector(".home")) {
-    buildArticleListingsUl(articleListings.length)
-} else {
-    buildArticleListingsUl(3)
+if (articleListingsUlHome && window.innerWidth < 1085) {
+    articleListingsUlHome.innerHTML = buildArticleListingsUl(3)
+} else if (articleListingsUlHome && window.innerWidth >= 1085) {
+    articleListingsUlHome.innerHTML = buildArticleListingsUl(6)
+} else if (articleListingsUlAlt) {
+    articleListingsUlAlt.innerHTML = buildArticleListingsUl(3)
 }
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth < 1085) {
-        buildArticleListingsUl(3)
-    } else if (window.innerWidth >= 1085 && document.querySelector(".home")) {
-        buildArticleListingsUl(articleListings.length)
-    } else {
-        buildArticleListingsUl(3)
+   if (articleListingsUlHome && window.innerWidth < 1085) {
+        articleListingsUlHome.innerHTML = buildArticleListingsUl(3)
+   } else if (articleListingsUlHome && window.innerWidth >= 1085) {
+    articleListingsUlHome.innerHTML = buildArticleListingsUl(6)
     }
 });
