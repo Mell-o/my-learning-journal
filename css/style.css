@@ -44,12 +44,24 @@
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
 
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
 
     background-color: var(--body-bg-color);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+header {
+    width: 100%;
 }
 
 h2 {
@@ -63,6 +75,7 @@ p {
 
 img {
     width: 100%;
+    height: auto;
 }
 
 time {
@@ -81,9 +94,8 @@ time {
 
     min-height: 59px;
 
-    padding: 0 1.5em; /* 24pxc */
+    padding: 0 1.5em; /* 24px */
     background-color: var(--navbar-bg-color);
-
 }
 
 .navbar a {
@@ -148,7 +160,6 @@ time {
     flex-direction: column;
     justify-content: end;
 
-    min-width: 414px;
     min-height: 293px;
 
     background-image: url("../images/hero-img.png");
@@ -185,13 +196,17 @@ time {
     margin: 0 0 1.25em 0; /* 20px */
 }
 
+.article-listings li {
+    list-style-type: none;
+}
+
+
 .article-listings img {
     margin: 0 0 0.875em 0; /* 14px */
 }
 
-.article-listings article {
-    height: 100%;
-    width: 100%;
+.article-listings article,
+.article-listings li {
     color: var(--article-preview-color);
 }
 
@@ -317,7 +332,7 @@ time {
 footer {
     background-color: var(--footer-background-color);
     text-align: center;
-    min-width: 414px;
+    width: 100%;
     padding: 2.313em 0; /* 37px */
 }
 
@@ -392,6 +407,12 @@ footer p {
 
     .article-listings {
         grid-template-columns: repeat(3, 1fr);
+        gap: 46px 26px;
+    }
+
+    .article-listings article,
+    .article-listings li {
+        color: var(--article-preview-color);
     }
 
     .view-more-btn {
@@ -427,6 +448,10 @@ footer p {
         font-size: 1.5rem; /* 24px */
     }
 
+    .hero-article-page .article-listings {
+        margin: 0;
+    }
+
     /* =================
        About Me Article
        ================= */
@@ -458,7 +483,8 @@ footer p {
         margin: 0 4.25em 0; /* 68px */
     }
 
-    .about-me-page .about-me-sub {
+    .about-me-page .about-me-sub,
+    .about-me-page .article-listings {
         margin: 0;
     }
 }
