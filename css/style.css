@@ -407,7 +407,7 @@ footer p {
 
     .article-listings {
         grid-template-columns: repeat(3, 1fr);
-        gap: 46px 26px;
+        gap: 2.875em 1.625em; /* 46px 26px */
     }
 
     .article-listings article,
@@ -472,7 +472,7 @@ footer p {
     }
 
     .bio-pic {
-        margin: 0 0 1.688em 0; /* 27px */
+        margin: 0 0 4.063em 0; /* 65px */
     }
 
     .about-me-article h2 {
