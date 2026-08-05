@@ -13,6 +13,8 @@
     --footer-text-primary-color: #ECECEC;
     --footer-text-secondary-color: #D7D7D7;
     --footer-background-color: #202020;
+
+    --link-hover-color: #C4B5FD;
 }
 
 *, *::after, *::before {
@@ -60,6 +62,10 @@ body {
     width: 100%;
 }
 
+a:hover, a:active {
+    color: var(--link-hover-color);
+}
+
 header {
     width: 100%;
 }
@@ -104,10 +110,6 @@ time {
     cursor: pointer;
 }
 
-.navbar a:hover, .navbar a:active {
-    text-decoration: underline;
-}
-
 .navbar h1 {
     font-size: 0.847em; /* 13.55px */
 }
@@ -149,10 +151,6 @@ time {
     color: white;
     text-decoration: none;
     cursor: pointer;
-}
-
-.hero a:hover {
-    color: #C4B5FD;
 }
 
 .hero-post {
