@@ -34,20 +34,20 @@ function buildArticleListingsUl (numOfListings) {
 const desktopMediaQuery = window.matchMedia("(min-width: 1085px)");
 
 function renderHomeListings(isDesktop) {
-    if (!articleListingsUlHome) return;
+    if (!articleListingsUlHome) return
 
     articleListingsUlHome.innerHTML = buildArticleListingsUl(
         isDesktop ? 6 : 3
-    );
+    )
 }
 
 
 if (articleListingsUlHome) {
-    renderHomeListings(desktopMediaQuery.matches);
+    renderHomeListings(desktopMediaQuery.matches)
 
     desktopMediaQuery.addEventListener("change", (event) => {
-        renderHomeListings(event.matches);
-    });
+        renderHomeListings(event.matches)
+    })
 }
 
 if (articleListingsUlHome && window.innerWidth < 1085) {
