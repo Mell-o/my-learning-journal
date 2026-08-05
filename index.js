@@ -10,7 +10,7 @@ const getFormattedDate = (articleDate) => {
     const inputDate = new Date(articleDate)
     const year = inputDate.getFullYear()
     const month = String(inputDate.getMonth() + 1).padStart(2, "0")
-    const day = String(inputDate.getDay()).padStart(2, "0")
+    const day = String(inputDate.getDate()).padStart(2, "0")
     return `${year}-${month}-${day}`
 }
 
@@ -29,6 +29,24 @@ function buildArticleListingsUl (numOfListings) {
         }).join("")
 }
 
+const desktopMediaQuery = window.matchMedia("(min-width: 1085px)");
+
+function renderHomeListings(isDesktop) {
+    if (!articleListingsUlHome) return;
+
+    articleListingsUlHome.innerHTML = buildArticleListingsUl(
+        isDesktop ? 6 : 3
+    );
+}
+
+
+if (articleListingsUlHome) {
+    renderHomeListings(desktopMediaQuery.matches);
+
+    desktopMediaQuery.addEventListener("change", (event) => {
+        renderHomeListings(event.matches);
+    });
+}
 
 if (articleListingsUlHome && window.innerWidth < 1085) {
     articleListingsUlHome.innerHTML = buildArticleListingsUl(3)
@@ -38,10 +56,6 @@ if (articleListingsUlHome && window.innerWidth < 1085) {
     articleListingsUlAlt.innerHTML = buildArticleListingsUl(3)
 }
 
-window.addEventListener('resize', () => {
-   if (articleListingsUlHome && window.innerWidth < 1085) {
-        articleListingsUlHome.innerHTML = buildArticleListingsUl(3)
-   } else if (articleListingsUlHome && window.innerWidth >= 1085) {
-    articleListingsUlHome.innerHTML = buildArticleListingsUl(6)
-    }
-});
+if (articleListingsUlAlt) {
+    articleListingsUlAlt.innerHTML = buildArticleListingsUl(3);
+}
