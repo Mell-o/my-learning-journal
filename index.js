@@ -15,7 +15,9 @@ const getFormattedDate = (articleDate) => {
 }
 
 function buildArticleListingsUl (numOfListings) {
-        return  articleListings.slice(0, numOfListings).map(({articleDate, articleTitle, articlePreview, articleImg}) => {
+        return articleListings
+        .slice(0, numOfListings)
+        .map(({articleDate, articleTitle, articlePreview, articleImg}) => {
             return `
             <li>
                 <article>
