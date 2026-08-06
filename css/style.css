@@ -248,6 +248,7 @@ time {
     margin: 0 0 2.688em 0; /* 43px */
 
     color: black;
+    cursor: pointer;
 }
 
 /* =================
