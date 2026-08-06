@@ -41,7 +41,6 @@ function renderHomeListings(isDesktop) {
     )
 }
 
-
 if (articleListingsUlHome) {
     renderHomeListings(desktopMediaQuery.matches)
 
